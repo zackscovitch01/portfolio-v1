@@ -273,6 +273,9 @@ ul {
 .navbar {
   background: #000;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .logo-wrapper {
@@ -414,8 +417,6 @@ header {
   }
 
   .navbar {
-    position: fixed;
-    z-index: 3;
     background: rgba(255, 255, 255, 0);
   }
 }
@@ -473,4 +474,67 @@ header {
   font-size: 11px;
   font-family: "Roboto Slab";
   color: #555555;
+}
+
+/* passion */
+.passion-section {
+  background: var(--grey-100);
+  padding: 2rem;
+}
+
+.section-center {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-center h4 {
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+}
+
+.section-center h5 {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: var(--letterSpacing);
+}
+
+.section-center p {
+  font-size: 15px;
+  letter-spacing: var(--letterSpacing);
+  font-weight: 300;
+  max-width: 85%;
+  margin-inline: auto;
+}
+
+.icon-container {
+  font-size: 55px;
+  width: 175px;
+  height: 175px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-light);
+  border-radius: 50%;
+}
+
+.icon-container i:hover {
+  rotate: 360deg;
+  transition: var(--transition);
+}
+
+.hobbies {
+  display: grid;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 876px) {
+  .hobbies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
