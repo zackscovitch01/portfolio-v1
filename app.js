@@ -1,5 +1,6 @@
 const navBtn = document.querySelector(".nav-btn");
 const menu = document.querySelector(".links");
+const navBar = document.querySelector(".navbar");
 
 navBtn.addEventListener("click", function () {
   if (menu.classList.contains("hide-navbar")) {
@@ -10,3 +11,5 @@ navBtn.addEventListener("click", function () {
     menu.classList.add("hide-navbar");
   }
 });
+
+console.log(navBar.getBoundingClientRect());
