@@ -1,6 +1,8 @@
 const navBtn = document.querySelector(".nav-btn");
 const menu = document.querySelector(".links");
 const navBar = document.querySelector(".navbar");
+const techImgs = document.querySelectorAll(".tech-img");
+const hero = document.querySelector(".header-img");
 
 navBtn.addEventListener("click", function () {
   if (menu.classList.contains("hide-navbar")) {
@@ -12,4 +14,11 @@ navBtn.addEventListener("click", function () {
   }
 });
 
-console.log(navBar.getBoundingClientRect());
+document.addEventListener("scroll", function () {
+  console.log(hero.getBoundingClientRect().height);
+  if (window.scrollY > hero.getBoundingClientRect().height - 50) {
+    navBar.classList.add("sticking");
+  } else if (window.scrollY <= 50) {
+    navBar.classList.remove("sticking");
+  }
+});

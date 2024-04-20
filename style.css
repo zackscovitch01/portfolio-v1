@@ -273,9 +273,10 @@ ul {
 .navbar {
   background: #000;
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 3;
+  transition: var(--transition);
 }
 
 .logo-wrapper {
@@ -348,6 +349,8 @@ ul {
   color: var(--grey-300);
 }
 
+/* HERO SECTION */
+
 header {
   position: relative;
 }
@@ -390,12 +393,20 @@ header {
   color: var(--grey-300);
 }
 
+@keyframes bounce {
+  to {
+    transform: scale(1.4);
+  }
+}
+
 .chevron-btn {
   background: none;
   border: none;
   font-size: 30px;
   color: var(--grey-300);
   cursor: pointer;
+  animation: bounce 1s ease-in-out infinite;
+  transition: var(--transition);
 }
 
 .chevron-btn a {
@@ -409,6 +420,7 @@ header {
     position: relative;
     gap: 1.2rem;
     background: rgba(255, 255, 255, 0);
+    height: auto;
     /* transform: translateY(0px); */
   }
 
@@ -419,6 +431,15 @@ header {
   .navbar {
     background: rgba(255, 255, 255, 0);
   }
+
+  .chevron-btn {
+    font-size: 40px;
+  }
+}
+
+.sticking {
+  background: #000;
+  transition: 0.3s ease-in-out all;
 }
 
 /* about section */
@@ -531,10 +552,114 @@ header {
   gap: 2rem;
 }
 
-@media screen and (min-width: 876px) {
+@media screen and (min-width: 976px) {
   .hobbies {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
+}
+
+/* Experience section */
+
+.exp-text {
+  width: 750px;
+  margin-inline: auto;
+}
+
+.tech-img {
+  width: 55px;
+  filter: grayscale(100%);
+  transition: 0.4s ease-in-out all;
+}
+
+.tech-img:hover {
+  filter: grayscale(0%);
+}
+
+.technologies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 4rem;
+}
+
+.work-img {
+  width: 150px;
+}
+
+.companies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 5rem;
+}
+
+@media screen and (min-width: 976px) {
+  .tech-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .section-center {
+    padding: 3rem;
+  }
+
+  .companies {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* RESUME */
+.resume-container {
+  background: url("./assets/skills/laptop\ 2.jpg");
+  height: 270px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.resume-container::after {
+  content: "";
+  height: 280px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content-wrapper {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.content-wrapper h5 {
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: var(--letterSpacing);
+  font-weight: 300;
+  color: var(--white);
+}
+
+.resume-btn {
+  color: var(--white);
+  padding: 10px 20px;
+  font-family: "Lato";
+  font-weight: 300;
+  background: transparent;
+  border: 1px solid var(--white);
+  cursor: pointer;
 }
