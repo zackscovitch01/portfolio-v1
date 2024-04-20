@@ -14,8 +14,8 @@ navBtn.addEventListener("click", function () {
   }
 });
 
+// Change nav color past a certain scroll position
 document.addEventListener("scroll", function () {
-  console.log(hero.getBoundingClientRect().height);
   if (window.scrollY > hero.getBoundingClientRect().height - 50) {
     navBar.classList.add("sticking");
   } else if (window.scrollY <= 50) {

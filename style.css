@@ -663,3 +663,117 @@ header {
   border: 1px solid var(--white);
   cursor: pointer;
 }
+
+/* PROJECTS */
+.projects-container {
+  display: grid;
+  padding: 0 1.5rem;
+  gap: 1.5rem;
+}
+
+/* .project {
+  position: relative;
+} */
+
+.main-project-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.fa-search-plus {
+  position: absolute;
+  font-size: 30px;
+  top: -20%;
+  left: 50%;
+  color: var(--white);
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in-out all;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.project:hover .fa-search-plus {
+  top: 50%;
+  visibility: visible;
+}
+
+.project-title {
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  font-weight: 300;
+  transition: 0.45s ease-in-out all;
+  display: none;
+  background: #06009c;
+  color: var(--white);
+  padding: 0.7rem;
+}
+
+.project:hover .project-title {
+  bottom: 0%;
+  display: block;
+}
+
+.project:hover.main-project-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 630px) {
+  .projects-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 925px) {
+  .projects-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.section-header {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: var(--letterSpacing);
+  margin-bottom: 2rem;
+}
+
+.section-header h5 {
+  width: 15ch;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  font-size: 30px;
+}
+
+.tags {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tag-btn {
+  pointer-events: none;
+  border: none;
+  color: #099842;
+  background-color: rgba(45, 212, 191, 0.1);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 13px;
+  margin-left: -1px;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  text-transform: capitalize;
+}
