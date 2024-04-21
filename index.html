@@ -48,7 +48,7 @@
       </div>
     </div>
     </nav>
-    <header class="header">
+    <header id='hero-section' class="header">
       <img class="img header-img" src="./assets/header-background.jpg" alt="" />
       <div class="header-text">
         <div class="main-text">
@@ -113,7 +113,7 @@
               <i class="fas fa-code"></i>
             </div>
             <h5>Development</h5>
-            <p>With a strong foundation in computer science, I'm passionate about web design and development, and interested in mobile app development. As I grow as a developer, I hope to write clean, readable code that can be used by others and leveraged to create beautiful software.</p>
+            <p>With a strong foundation in the basics of web development, I'm passionate about web design and development, and interested in web app developement. As I grow as a developer, I hope to write clean, readable code that can be used by others and leveraged to create beautiful software.</p>
           </article>
 
           <article>
@@ -121,7 +121,8 @@
               <i class="fas fa-chalkboard-teacher"></i>
             </div>  
             <h5>Learning</h5>
-            <p>Continual learning is the cornerstone of my personal and professional growth. I thrive on the thrill of diving into new topics, whether it's through reading, online courses, or hands-on experimentation enabling me to stay abreast of the latest technologies but also fosters adaptability and innovation in problem-solving.</p>
+            <p>Continual learning is the cornerstone of my personal and professional growth. I thrive on the thrill of diving into new topics, whether it's through reading, online courses, or hands-on experimentation enabling me to stay abreast of the latest technologies </p>
+            <!-- but also fosters adaptability and innovation in problem-solving. -->
           </article>
         </div>
       </div>
@@ -179,21 +180,44 @@
       </div>
       <div class="projects-container">
         <!-- individual project -->
-        <article class="project">
-          <div class="main-project-container">
+        <!-- <article class="project">
+          <a href="https://twitter.com/"><div class="main-project-container">
             <img class="img" src="./assets/projects-demos/portfolio-v1.png" alt="">
             <i class="fas fa-search-plus"></i>
             <p class="project-title">Personal Website v1</p>
-          </div>
+          </div></a>
           <div class="tags">
             <button class="tag-btn">Html</button>
             <button class="tag-btn">Css</button>
             <button class="tag-btn">Javascript</button>
           </div>
-        </article>
+        </article> -->
         <!-- end of single project -->
       </div>
     </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="#contact">
+      <div class="contact-header">
+        <i class="fas fa-paper-plane"></i>
+        <h5>Get in touch!</h5>
+        <p>Looking forward to speak with you during the interview. Click the button to contact me!</p>
+        <a class="btn-link" href=""><button class="contact-btn">Schedule interview</button></a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer-section">
+      <ul class="icons-container">
+        <li class="facebook"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+        <li class="twitter"><a href=""><i class="fab fa-twitter"></i></a></li>
+        <li class="instagram"><a href=""><i class="fab fa-instagram"></i></a></li>
+        <li class="github"><a href=""><i class="fab fa-github"></i></a></li>
+        <li class="linkedin"><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+      <a href="#hero-section"><img class="rocket-img" src="./assets/skills/rocket.png" alt=""></a>
+      <p class="copyright">&copy Moubarack Bagoudou <span id="year"></span></p>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>
