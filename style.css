@@ -886,3 +886,11 @@ header {
   background: #3f729b;
   transition: 0.4s ease all;
 }
+.github:hover > a {
+  background: #4183c4;
+  transition: 0.4s ease all;
+}
+.linkedin:hover > a {
+  background: #0077b5;
+  transition: 0.4s ease all;
+}
