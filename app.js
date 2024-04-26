@@ -71,3 +71,8 @@ let currentDate = new Date();
 let currentYear = currentDate.getFullYear();
 
 year.textContent = currentYear;
+
+// close navbar on click
+menu.addEventListener("click", function () {
+  menu.classList.add("hide-navbar");
+});
