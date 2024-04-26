@@ -3,7 +3,7 @@ const projects = [
     img: "./assets/projects-demos/portfolio-v1.png",
     title: "Personal Website v1",
     tags: ["Html", "Css", "Javascript"],
-    website: "",
+    website: "https://v1-moubarack-bagoudou.netlify.app/",
   },
 ];
 
